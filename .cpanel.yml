@@ -1,0 +1,17 @@
+---
+deployment:
+  tasks:
+    # Setează calea în care vrei să fie deploy-uite fișierele
+    - export DEPLOYPATH=/home/daviicrf/repositories/GreenHelper
+
+    # Copiază toate fișierele din proiect (fără node_modules și .git)
+    - /bin/cp -R src $DEPLOYPATH/src
+    - /bin/cp package.json $DEPLOYPATH/
+    - /bin/cp package-lock.json $DEPLOYPATH/
+    - /bin/cp -R docs $DEPLOYPATH/docs
+
+    # Dacă ai nevoie de build, de exemplu pentru frontend:
+    # - /bin/cp -R frontend/build $DEPLOYPATH/frontend/build
+
+    # Opțional: instalează dependențele pe server
+    - cd $DEPLOYPATH && npm install --production
