@@ -18,11 +18,11 @@ const options = {
         description: "Local server",
       },
       {
-        url: "https://greenhelper.onrender.com/api/v1",
+        url: "https://greenhelper.davidan.website/api/v1",
         description: "Production server",
       },
       {
-        url: "https://greenhelper.onrender.com/api/v2",
+        url: "https://greenhelper.davidan.website/api/v2",
         description: "Production server",
       },
     ],
